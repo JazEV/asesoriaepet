@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from django.views.generic import TemplateView, ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Turno, Horario, Novedad,
+from .models import Turno, Horario, Novedad
 from rest_framework.permissions import BasePermission, DjangoModelPermissions, SAFE_METHODS
 from .serializers import TurnoSerializer, HorarioSerializer, NovedadSerializer
 from django.views.generic.detail import DetailView
@@ -20,8 +20,8 @@ class TurnoCreate(CreateView):
 	success_url = reverse_lazy('turno:turno_create')
 
 class HorarioViewSet(viewsets.ModelViewSet):
-	queryset = Turno.objects.all()
-	serializer_class = TurnoSerializer
+	queryset = Horario.objects.all()
+	serializer_class = HorarioSerializer
 
 class NovedadViewSet(viewsets.ModelViewSet):
 	queryset = Novedad.objects.all()

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block titulo %}Novedad {{ novedad.id }} {% endblock titulo %}
+{% block contenido %}
+<div class="container">
+	<div class="row">
+		<div class="col mt-5">
+			<p><strong>Titulo:</strong> {{ novedad.titulo }}</p>
+			<p><strong>Fecha:</strong> {{ novedad.creacion|date:"d-m-Y" }}</p>
+		</div>
+	</div>
+</div>
+{% endblock contenido %}
