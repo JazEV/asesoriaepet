@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+<div class="container">
+	<div class="row">
+		<div class="col mt-2 mb-2">
+			<h1>Asesoria</h1>
+			<h3>Contactanos:</h3>
+			<div class="jumbotron">
+			<form action="#" method="post">
+				{% csrf_token %}
+				{{ form|crispy }}
+			<input class="btn btn-outline-warning" type="submit" value="Enviar">
+			</form>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+		</div>
+	</div>
+</div>
+{% endblock contenido %}
